@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- <h1>signup</h1> -->
+<div class="container-fluid ">
+    <div class="container p-4 m-4 col-lg-4 mx-auto border rounded">
+        <h3 class="alert alert-light border rounded"> Creat An Account</h3>
+        <form action="/login" method="POST" class="bg-body-tertiary">
+            {% csrf_token %}
+
+            {% if error %}
+            <div class="alert alert-danger" role="alert">{{error}}</div>
+            {% endif %}
+                   
+            <div class="mb-3">
+                <label for class="form-label">Email address</label>
+                <input type="email" required="" value="{{values.email}}" name="email" class="form-control"
+                    placeholder="example@gmail.com">
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="*******">
+            </div>
+        
+            <div class=" mb-5">
+                <input type="submit" value="Login"  class="btn btn-sm btn-info col-lg-5  float-end " >
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

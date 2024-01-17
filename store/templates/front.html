@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+       <!-- carosol -->
+       <div class="container-fluid">
+        <div class="container mt-5 grid">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+           
+            <div class="container">
+              <div class="carousel-inner " style=" height: 600px;">
+                <div class="carousel-item active overlay-image" style=" height: 32rem;
+                position: relative;">
+                  <img src="https://th.bing.com/th/id/R.bdc562c704cc778928d285aa972ee9db?rik=aWmaauBoKEph2g&riu=http%3a%2f%2fwww.quickfixkeywest.com%2fimages%2fcomputer.jpg&ehk=7HahImycugYlESTH9kA4qEEBKldB%2b3sq5eKbhSc2IFM%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="..." style="height: 100% !important;
+                  width:  100% !important;" >
+              </div>
+                <div class="carousel-item"  style=" height: 32rem;
+                position: relative;">
+                  <img src="https://www.almiriatechstore.co.ke/wp-content/uploads/2018/12/Computing-Equipment-Buy-Laptops-Desktops-Printers-and-Projectors-1-1400x481.jpg" alt="..."  style="height: 100% !important;
+                  width:  100% !important;">
+                 
+                </div>
+                <div class="carousel-item"  style=" height: 32rem;
+                position: relative;">
+                  <img src="https://waltonbd.com/image/catalog/new_website/landing-banner/hap/hap.jpg" class="d-block w-100" alt="..."  style="height: 100% !important;
+                  width:  100% !important;" >
+                  
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+         </div>
+       </div>
+
+       
+       <!-- gallery -->
+       <!-- {{images}} -->
+       <div id="" class="col-lg-9 mx-auto ">
+          <div class="row mx-auto ">
+            {% for img in images %}
+            <div class="card mx-auto mb-3" id="{{f.id}}" style="width: 18rem;">
+              <img src="{{img.image.url}}" class="card-img-top" alt
+                style="height: 100%;">
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      
+
+{% endblock %}
